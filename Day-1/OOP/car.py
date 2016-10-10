@@ -1,3 +1,4 @@
+
 class Car(object):
   """The Car class"""
  
@@ -19,7 +20,10 @@ class Car(object):
     
   def drive(self,speed):
     """check the speed of vehicle"""
-    self.speed = speed
+    if self.car_type == 'trailer':
+     self.speed = speed * 11
+    else:
+     self.speed = 10 ** speed    
     return self
 
   def is_saloon(self):
